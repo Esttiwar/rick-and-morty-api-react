@@ -50,16 +50,16 @@ function App() {
           <Navbar brand="Rick And Morty"></Navbar>          
           <div className="bg-pink-600">
             <Pagination prev={info.prev} next={info.next} onPrevious={onPrevious} onNext={onNext}></Pagination>  
-            <Link to="/persona">
-                <Characters characters={characters}></Characters>                 
-            </Link>        
+            
+            <Characters characters={characters}></Characters>                 
+                 
             <Pagination prev={info.prev} next={info.next} onPrevious={onPrevious} onNext={onNext}></Pagination>
           </div>
         </Route> 
 
 
-        <Route path="/persona">
-          <Persona></Persona>
+        <Route path="/personaje/:id">
+          <Persona characters={characters}></Persona>
         </Route>
 
       </Switch> 

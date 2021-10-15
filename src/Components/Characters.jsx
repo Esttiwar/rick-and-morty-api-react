@@ -1,13 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 
 
 const Characters = ({characters}) => {
+
     return (
-        <>
         <div className="w-full display flex flex-wrap justify-center">
             {characters.map(character => (              
-                <div onClick={() => console.log(character)} key={character.id}>
+            <Link to={`/personaje/${character.id}`} key={character.id}>
+                <div onClick={() => console.log(character)}>
                     <div className="m-3 p-3 border border-black display flex flex-col rounded-lg bg-indigo-500 text-white hover:bg-indigo-700 cursor-pointer">
                         <div className="head-container rounded-lg display flex flex-col text-center mb-4 border border-black bg-red-600">
                             <img className="rounded-lg" src={character.image} alt="" />
@@ -20,10 +23,10 @@ const Characters = ({characters}) => {
                         </div>
                     </div>
                 </div>                     
+            </ Link>
             ))}
         </div>
            
-        </>
     )
 }
 

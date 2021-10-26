@@ -5,7 +5,7 @@ import './App.css';
 import Characters from './Components/Characters.jsx'
 import Pagination from './Components/Pagination.jsx'
 import Persona from './Components/Persona.jsx';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
 
@@ -21,6 +21,7 @@ function App() {
         .then((data) => {
             setCharacters(data.data.results);
             setInfo(data.data.info);
+            console.log(characters)
         }) 
         .catch((error) => {
         console.log(error);
@@ -38,6 +39,8 @@ function App() {
   useEffect(() => {
     loadCharacters(url)
   },[])
+
+  
 
 
   return (

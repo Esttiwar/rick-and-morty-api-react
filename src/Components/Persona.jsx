@@ -17,7 +17,7 @@ const Persona = ({characters}) => {
 
         setCharacter(selectedCharacter)
         setLoading(false)
-    }, [id])
+    }, [id, characters])
 
     if (loading){
         return (
@@ -36,7 +36,7 @@ const Persona = ({characters}) => {
             <div className='card lg:w-3/12 text-white display flex flex-col font-mono rounded-lg items-center text-center border border-black'>
                 <div className='flex flex-col'>
                     <h1 className='my-5 text-3xl break-words'>{character.name}</h1>
-                    <img className="image rounded-full mx-6 border border-black" src={character.image} alt={`profile image: ${character.image}`} />
+                    <img className="image rounded-full mx-6 border border-black" src={character.image} alt={`profile:${character.image}`} />
                 </div>
                 <div className='pb-5'>
                     <h1 className='my-3'>Gender: {character.gender}</h1>

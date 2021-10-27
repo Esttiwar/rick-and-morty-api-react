@@ -43,7 +43,6 @@ function App() {
             setInfo(data.data.info);
             setLoading(false)
             setCardsCharacters(data.data.results)
-            console.log(data.data.results)
         }) 
         .catch((error) => {
         console.log(error);
@@ -65,10 +64,6 @@ function App() {
 
   
   const bG = "https://i.postimg.cc/SNBBs7J4/rm.png"
-  const imagen = {
-    backgroundImage: `url(${bG}})`
-  
-  }
 
   return (
     <>

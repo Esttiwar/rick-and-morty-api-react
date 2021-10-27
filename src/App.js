@@ -41,7 +41,11 @@ function App() {
   },[])
 
   
-
+  const bG = "https://i.postimg.cc/SNBBs7J4/rm.png"
+  const imagen = {
+    backgroundImage: `url(${bG}})`
+  
+  }
 
   return (
     <>
@@ -50,7 +54,7 @@ function App() {
       <Switch>
 
         <Route path="/" exact>
-          <Navbar brand="Rick And Morty"></Navbar>          
+          <Navbar brand={<img src={bG} alt=""/>}></Navbar>          
           <div className="principal">
             <Pagination prev={info.prev} next={info.next} onPrevious={onPrevious} onNext={onNext}></Pagination>  
             

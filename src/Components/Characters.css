@@ -11,6 +11,10 @@
     
 }
 
+.head-container{
+    background-color: #000000;
+}
+
 
 @media screen and (max-width: 400px) {
     .card-container{

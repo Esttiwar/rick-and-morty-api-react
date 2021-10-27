@@ -13,7 +13,7 @@ const Pagination = ({prev, next, onPrevious, onNext}) => {
 
     return (
         <nav>
-            <ul className="display flex justify-center list-none">
+            <ul className="display flex justify-center list-none bg-black"> 
                 {
                     prev ?
                 <li>

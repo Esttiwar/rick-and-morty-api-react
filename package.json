@@ -1,5 +1,6 @@
 {
   "name": "rick-and-morty",
+  "homepage": "https://Esttiwar.github.io/rick-and-morty-api-react/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

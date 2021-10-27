@@ -14,6 +14,26 @@ function App() {
   const [characters, setCharacters] = useState([])
   const [info, setInfo] = useState({})
   const url = "https://rickandmortyapi.com/api/character"
+  const [loading, setLoading] = useState(true)
+
+
+  // FILTRO
+  const [cardsCharacters, setCardsCharacters] = useState([])
+  const [busqueda, setBusqueda] = useState("")
+
+  const filtroBusqueda = (e) => {
+      setBusqueda(e.target.value)
+      filtrar(e.target.value)        
+    }
+  
+  const filtrar = (terminoBusqueda) => {
+    let resultadosBusquedaCharacters = cardsCharacters.filter(elemento => {
+      if (elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+        return elemento
+      }
+    })
+    setCharacters(resultadosBusquedaCharacters)
+  }
 
    const loadCharacters = async(url) => { 
       await axios
@@ -21,7 +41,9 @@ function App() {
         .then((data) => {
             setCharacters(data.data.results);
             setInfo(data.data.info);
-            console.log(characters)
+            setLoading(false)
+            setCardsCharacters(data.data.results)
+            console.log(data.data.results)
         }) 
         .catch((error) => {
         console.log(error);
@@ -38,6 +60,7 @@ function App() {
 
   useEffect(() => {
     loadCharacters(url)
+    //setLoading(false)
   },[])
 
   
@@ -57,8 +80,8 @@ function App() {
           <Navbar brand={<img src={bG} alt=""/>}></Navbar>          
           <div className="principal">
             <Pagination prev={info.prev} next={info.next} onPrevious={onPrevious} onNext={onNext}></Pagination>  
-            
-            <Characters characters={characters}></Characters>                 
+
+            <Characters characters={characters} loading={loading} filtroBusqueda={filtroBusqueda}></Characters>                 
                  
             <Pagination prev={info.prev} next={info.next} onPrevious={onPrevious} onNext={onNext}></Pagination>
           </div>

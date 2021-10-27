@@ -21,7 +21,9 @@ const Persona = ({characters}) => {
 
     if (loading){
         return (
-            <h1>Cargando</h1>
+            <h1 className='display flex justify-center'>
+                <i className="fa-10x fas fa-sync fa-spin"></i>
+            </h1>
         )
     }if (!loading && !character){
         return (

@@ -8,4 +8,17 @@
 
 .card {
     border: 5px solid rgb(0, 0, 0);
+    background-color: #000000;
+    color: #02b3c6;
+    text-shadow: 0 0 30px #f0f0f1;
+}
+
+.image {
+    border: 2px solid black;
+}
+
+@media screen and (min-width: 1400px) {
+    .card{
+        width: 20%;
+    }
 }

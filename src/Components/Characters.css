@@ -1,0 +1,26 @@
+.fondo {
+    background-image: url("https://i.postimg.cc/8cZc118n/Rick-and-Morty-pp.jpg;");
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: 1930px;
+    background-attachment: fixed;
+}
+
+.card-container{
+    margin: 40px;
+    
+}
+
+
+@media screen and (max-width: 400px) {
+    .card-container{
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .card-container{
+        margin: 20px 0 10px 7px;
+        width: 95%;
+    }
+}

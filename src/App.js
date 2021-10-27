@@ -51,7 +51,7 @@ function App() {
 
         <Route path="/" exact>
           <Navbar brand="Rick And Morty"></Navbar>          
-          <div className="bg-pink-600">
+          <div className="principal">
             <Pagination prev={info.prev} next={info.next} onPrevious={onPrevious} onNext={onNext}></Pagination>  
             
             <Characters characters={characters}></Characters>                 

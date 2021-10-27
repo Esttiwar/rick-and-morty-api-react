@@ -22,7 +22,7 @@ const Characters = ({characters, loading, filtroBusqueda}) => {
                         id="buscar" onChange={filtroBusqueda} name="buscar" type="text" placeholder="Buscar"/>                            
                     
                 </div>
-                <div className="fondo w-full display flex flex-wrap justify-center">
+                <div className="fondo w-full display flex flex-wrap justify-evenly">
 
 
                     {characters.map(character => (              

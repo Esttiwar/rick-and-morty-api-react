@@ -43,7 +43,7 @@ const Persona = ({characters}) => {
                     <h1 className='my-3'>Location: {character.location.name}</h1>
                     <h1 className='my-3'>Origen: {character.origin.name}</h1>
                     <h1 className='my-3'>Specie: {character.species}</h1>
-                    <h1 className='my-3'>Origen: {character.status}</h1>
+                    <h1 className='my-3'>Status: {character.status}</h1>
                 </div>
             </div>
         </div>

@@ -34,7 +34,7 @@ const Characters = ({characters, loading, filtroBusqueda}) => {
                                     <span className="font-black font-mono my-3">{character.name}</span>
                                 </div>
                                 <div className="body-container text-center display flex flex-col">
-                                    <span>Specie: {character.species}</span>
+                                    <span>Species: {character.species}</span>
                                     <span>Gender: {character.gender}</span>
                                 </div>
                             </div>
